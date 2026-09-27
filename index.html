@@ -293,9 +293,16 @@ body.invitation-locked {
   }
 
   const envelope = document.getElementById('envelope');
+  const openNote = document.querySelector('.open-note');
+
   if(envelope){
     envelope.addEventListener('click', unlockInvitation, {once:true});
     envelope.addEventListener('pointerup', unlockInvitation, {once:true});
+  }
+
+  if(openNote){
+    openNote.addEventListener('click', unlockInvitation, {once:true});
+    openNote.addEventListener('pointerup', unlockInvitation, {once:true});
   }
 
   // Also support common "Tap to Open" buttons if the invitation uses one.
